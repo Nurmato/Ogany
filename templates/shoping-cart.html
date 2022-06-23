@@ -38,8 +38,8 @@
         </div>
         <div class="humberger__menu__cart">
             <ul>
-                <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                <li><a href="#"><i class="fa fa-heart"></i> <span>99+</span></a></li>
+                <li><a href="{% url 'cart' %}"><i class="fa fa-shopping-bag"></i> <span>99+</span></a></li>
             </ul>
             <div class="header__cart__price">item: <span>$150.00</span></div>
         </div>
@@ -52,7 +52,7 @@
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
                 <li class="active"><a href="./index.html">Home</a></li>
-                <li><a href="./shoping-cart.html">Shopping Cart</a></li>
+                <li><a href="{% url 'cart' %}">Shopping Cart</a></li>
                 <li><a href="./shop-details.html">Shop Details</a></li>
 
             </ul>
@@ -95,7 +95,7 @@
                     <nav class="header__menu">
                         <ul>
                             <li class="active"><a href="{% url 'index' %}">Home</a></li>
-                            <li><a href="{% url 'shoping_cart' %}">Shoping Cart</a>
+                            <li><a href="{% url 'cart' %}">Shoping Cart</a>
                             </li>
                             <li><a href="{% url 'contact' %}">Contact</a></li>
                         </ul>
@@ -104,8 +104,8 @@
                 <div class="col-lg-3">
                     <div class="header__cart">
                         <ul>
-                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                            <li><a href="#"><i class="fa fa-heart"></i> <span>99+</span></a></li>
+                            <li><a href="{% url 'cart' %}"><i class="fa fa-shopping-bag"></i> <span>{{all_product_count}}</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -143,7 +143,7 @@
                                 {% for product in products_inCart %}
                                 <tr>
                                     <td class="shoping__cart__item">
-                                        <img src="{{product.image.url}}" alt="">
+                                        <img width="150" height="150" src="{{product.image.url}}" alt="">
                                         <h5>{{product.name}}</h5>
                                     </td>
                                     <td class="shoping__cart__price">
@@ -211,6 +211,11 @@
                         <div class="footer__about__logo">
                             <a href="{% url 'shoping_cart' %}"><img src="{% static 'img/logo.png' %}" alt=""></a>
                         </div>
+                        <ul>
+                            <li>Address: st 101 home 57A</li>
+                            <li>Phone: +996-955-87-40-40</li>
+                            <li>Email: umidn0246@gmail.com</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
